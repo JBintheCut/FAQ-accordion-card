@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to top, hsl(240, 73%, 65%), hsl(273, 75%, 66%));
+}
+
+.container {
+    height: 600px;
+    width: 1100px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container-img {
+    overflow: hidden;
+    height: 100%;
+    width: 50%;
+    display: grid;
+    place-items: center;
+    background-image: url(bg-pattern-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.bg-img {
+    max-width: 600px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.box-img {
+    position: absolute;
+    width: 250px;
+    z-index: 3;
+    top: 45%;
+    left: 15%;
+}
+
+.woman-img {
+    position: relative;
+    width: 600px;
+    overflow: hidden;
+    z-index: 2;
+    right: 70px;
+}
+
+.faq {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.faq-header {
+    font-size: 40px;
+    color: hsl(238, 29%, 16%);
+}
+
+.questions {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-bottom: solid hsl(240, 5%, 91%) 1px;
+    color: hsl(240, 6%, 50%);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.question-box:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+.question-box.active {
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+
+.question-box.active img {
+    transform: rotate(180deg);
+}
+
+.arrow {
+    height: 10px;
+    width: 15px;
+    transition: 0.5s ease;
+}
+
+
+.answer-box {
+    padding: 5px;
+    color: hsl(240, 6%, 50%);
+    font-size: 14px;
+    display: none;
+}
+
+.answer-box.active {
+    transform: translateY(0);
+    display: flex;
+}
